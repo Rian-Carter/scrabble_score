@@ -2,25 +2,22 @@ require('rspec')
 require('scrabble')
 
 describe Scrabble do
-# it("returns a scrabble score for a letter") do
-#   expect("a".scrabble()).to(eq(1))
-# describe splitword do
   it("should take in a word and split it into individual letters") do
     newSplit = Scrabble.new
     splitUpWord = newSplit.splitword('dog')
-    expect(splitUpWord).to eq(['d', 'o', 'g'])
+    expect(splitUpWord).to(eq(['d', 'o', 'g']))
   end
 
   it("should take in a single letter and return the value") do
     oneLetter = Scrabble.new
-    testVar = oneLetter.word_score("q")
-    expect(testVar).to eq(10)
+    testVar = oneLetter.word_score("j")
+    expect(testVar).to(eq(8))
   end
 
   it("should take in a word and return the score based on the value of each letter") do
     word = Scrabble.new
-    testWord = word.scorez("dog")
-    expect(testWord).to eq(5)
+    testWord = word.scorez("zoo")
+    expect(testWord).to(eq(12))
   end
 end
 

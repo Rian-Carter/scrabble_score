@@ -1,3 +1,7 @@
+#!/usr/bin/env ruby
+user_word = ARGV[0]
+
+
 require('pry')
 
 class Scrabble
@@ -11,10 +15,6 @@ class Scrabble
     "q" => 10,"z" => 10
   }
   LETTER_SCORE.default = 0
-
-  # def initialize(word)
-  #   @word = letters.split("")
-  # end
 
   def word_score(word)
     LETTER_SCORE.fetch(word)
@@ -32,42 +32,18 @@ class Scrabble
   end
 end
 
-  
-  
-  
-
-  # def score
-  #   word_score = 0
-  #   LETTER_SCORE.each do |letters, value|
-  #     word_score += (@word.scan(letters).count * value)
-  # end
 
 
-#  def bundle(word)
-#    x=0
-#    new_array=splitword(word)
-  #  new_array.each do |array_element|
-#    y=word_score(array_element)
-#    current_score=x+y
-  #  end
-#    current_score
-#  end
+# scrabble = Scrabble.new
+# puts 'What word would you like to score in Scrabble?'
+# word = gets.chomp
+# puts "okay, scoring #{word}!"
+# puts scrabble.scorez(word)
 
 
-# end
-
-  # def score
-  #   @letters.inject(0) |total_score, letter|
-  #     total_score + LETTER_SCORE[letter]
-  # end
-# end
-
-# def self.score(word)
-#   new(word).score
-# end
-
-
-  # def initialize(word)
-  #   @word = word
-  # end
-
+scrabble = Scrabble.new
+puts 'What word would you like to score in Scrabble?'
+word = gets.chomp
+# puts "#{word}, is worth: #{scrabble.word_score(word)}!"
+# puts "#{word}, is worth: #{scrabble.splitword(word)}!"
+puts "#{word}, is worth: #{scrabble.scorez(word)}!"
